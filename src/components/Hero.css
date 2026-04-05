@@ -10,8 +10,27 @@
 
 @media (max-width: 480px) {
   .hero {
-    min-height: 90vh;
-    padding: 60px 16px;
+    min-height: 80vh;
+    padding: 50px 16px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-buttons {
+    gap: 0.75rem;
   }
 }
 

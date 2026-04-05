@@ -123,6 +123,15 @@
   line-height: 1.6;
 }
 
+@media (max-width: 480px) {
+  .project-content p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
 .project-tags {
   display: flex;
   flex-wrap: wrap;
