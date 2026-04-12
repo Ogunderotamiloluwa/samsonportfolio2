@@ -122,10 +122,10 @@
   }
 
   .project-content p {
-    font-size: 0.9rem;
+    font-size: 0.78rem;
     margin-bottom: 0.9rem;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     line-height: 1.4;
