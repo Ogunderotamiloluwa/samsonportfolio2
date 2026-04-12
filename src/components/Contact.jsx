@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { FiMail, FiPhone, FiGithub, FiLinkedin } from 'react-icons/fi'
+import { FiMail, FiPhone, FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi'
 import { AiOutlineDownload } from 'react-icons/ai'
 import './Contact.css'
 
@@ -64,6 +64,12 @@ export default function Contact() {
       label: 'LinkedIn',
       value: 'Samson Ogundero',
       link: 'https://www.linkedin.com/in/samson-ogundero-6948b13b2',
+    },
+    {
+      icon: FiTwitter,
+      label: 'Twitter',
+      value: '@samson24434',
+      link: 'https://twitter.com/samson24434',
     },
   ]
 
