@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi'
+import { FiGithub, FiLinkedin, FiMail, FiTwitter } from 'react-icons/fi'
 import './Footer.css'
 
 export default function Footer() {
@@ -8,6 +8,7 @@ export default function Footer() {
   const socialLinks = [
     { icon: FiGithub, href: 'https://github.com/Ogunderotamiloluwa', label: 'GitHub' },
     { icon: FiLinkedin, href: 'https://www.linkedin.com/in/samson-ogundero-6948b13b2', label: 'LinkedIn' },
+    { icon: FiTwitter, href: 'https://twitter.com/samson24434', label: 'Twitter' },
     { icon: FiMail, href: 'mailto:ogunderotamiloluwa@gmail.com', label: 'Email' },
   ]
 
