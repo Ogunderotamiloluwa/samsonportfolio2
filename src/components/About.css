@@ -20,9 +20,9 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 100px;
+  width: 120px;
   height: 4px;
-  background: linear-gradient(90deg, var(--accent), var(--accent-light));
+  background: var(--gradient-primary);
   border-radius: 2px;
 }
 
@@ -49,9 +49,9 @@
 .highlight-box {
   background: var(--bg-secondary);
   border: 1px solid var(--border-color);
-  border-radius: 10px;
+  border-radius: 16px;
   padding: 2rem;
-  transition: var(--transition);
+  transition: var(--transition-smooth);
   cursor: pointer;
   position: relative;
   overflow: hidden;
@@ -64,8 +64,8 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
-  transition: var(--transition);
+  background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.15), transparent);
+  transition: left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .highlight-box:hover::before {
@@ -73,15 +73,16 @@
 }
 
 .highlight-box:hover {
-  border-color: var(--accent);
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
+  border-color: var(--accent-primary);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(6, 182, 212, 0.2);
 }
 
 .highlight-box h3 {
-  color: var(--text-primary);
+  color: var(--accent-primary);
   margin-bottom: 0.75rem;
   font-size: 1.25rem;
+  font-weight: 700;
 }
 
 .highlight-box p {
