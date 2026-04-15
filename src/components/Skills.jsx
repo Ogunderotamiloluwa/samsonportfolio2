@@ -4,15 +4,17 @@ import {
   FaHtml5, 
   FaCss3Alt, 
   FaGitAlt, 
-  FaGithub 
+  FaGithub,
+  FaNodeJs,
+  FaDatabase
 } from 'react-icons/fa'
-import { SiNetlify, SiVercel } from 'react-icons/si'
+import { SiNetlify, SiVercel, SiMongodb } from 'react-icons/si'
 import './Skills.css'
 
 export default function Skills() {
   const skillCategories = [
     {
-      title: 'Frontend',
+      title: 'Frontend Development',
       skills: [
         { name: 'React', icon: FaReact, color: '#61dafb' },
         { name: 'HTML5', icon: FaHtml5, color: '#e34c26' },
@@ -26,6 +28,14 @@ export default function Skills() {
         { name: 'GitHub', icon: FaGithub, color: '#ffffff' },
         { name: 'Netlify', icon: SiNetlify, color: '#00c7b7' },
         { name: 'Vercel', icon: SiVercel, color: '#000000' },
+      ],
+    },
+    {
+      title: 'Backend Experience',
+      subtitle: '(Frontend-focused, with hands-on backend experience)',
+      skills: [
+        { name: 'Node.js', icon: FaNodeJs, color: '#68a063' },
+        { name: 'MongoDB', icon: SiMongodb, color: '#13aa52' },
       ],
     },
   ]
@@ -81,6 +91,7 @@ export default function Skills() {
           {skillCategories.map((category, idx) => (
             <motion.div key={idx} className="skill-category" variants={itemVariants}>
               <h3>{category.title}</h3>
+              {category.subtitle && <p className="category-subtitle">{category.subtitle}</p>}
               <div className="skills-list">
                 {category.skills.map((skill, skillIdx) => {
                   const Icon = skill.icon
