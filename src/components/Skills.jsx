@@ -21,7 +21,7 @@ export default function Skills() {
       ],
     },
     {
-      title: 'Tools & Platforms',
+      title: 'Skills & Tools',
       skills: [
         { name: 'Git', icon: FaGitAlt, color: '#f1502f' },
         { name: 'GitHub', icon: FaGithub, color: '#ffffff' },

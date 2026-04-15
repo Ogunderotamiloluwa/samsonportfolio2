@@ -58,6 +58,7 @@ export default function Navbar() {
         <button 
           className="menu-toggle"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
         >
           {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
         </button>
@@ -101,51 +102,41 @@ export default function Navbar() {
         </ul>
       </div>
 
-      {/* Mobile Floating Grid Menu */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            className="mobile-menu-backdrop"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setIsOpen(false)}
-          />
-        )}
-      </AnimatePresence>
-
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            className="mobile-menu-grid"
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-          >
-            {menuItems.map((item, idx) => (
-              <motion.button
-                key={idx}
-                className="mobile-menu-item"
-                variants={itemVariants}
-                onClick={() => scrollToSection(item.id)}
-              >
-                <span className="menu-label">{item.label}</span>
-              </motion.button>
-            ))}
-            <motion.a
-              href="/Samson_Ogundero_Resume.html"
-              download
-              target="_blank"
-              className="mobile-menu-item resume-item"
-              variants={itemVariants}
+      {/* Mobile Dropdown Menu */}
+      {isOpen && (
+        <motion.div
+          className="mobile-menu-dropdown"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ type: 'spring', stiffness: 200, damping: 25 }}
+        >
+          {menuItems.map((item, idx) => (
+            <motion.button
+              key={idx}
+              className="mobile-menu-link"
+              onClick={() => scrollToSection(item.id)}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: idx * 0.05 }}
             >
-              <AiOutlineDownload size={20} />
-              <span className="menu-label">Resume</span>
-            </motion.a>
-          </motion.div>
-        )}
-      </AnimatePresence>
+              {item.label}
+            </motion.button>
+          ))}
+          <motion.a
+            href="/Samson_Ogundero_Resume.html"
+            download
+            target="_blank"
+            className="mobile-menu-link resume-link"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: menuItems.length * 0.05 }}
+          >
+            <AiOutlineDownload size={16} />
+            Resume
+          </motion.a>
+        </motion.div>
+      )}
     </motion.nav>
   )
 }
