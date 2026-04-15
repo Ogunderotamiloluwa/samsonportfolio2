@@ -68,21 +68,11 @@
 .skill-category h3 {
   color: var(--accent-primary);
   font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 2rem;
   text-align: center;
   font-weight: 700;
   position: relative;
   z-index: 1;
-}
-
-.category-subtitle {
-  color: var(--text-muted);
-  font-size: 0.85rem;
-  text-align: center;
-  margin-bottom: 1.5rem;
-  font-style: italic;
-  font-weight: 500;
-  letter-spacing: 0.3px;
 }
 
 .skills-list {
@@ -129,12 +119,6 @@
 
   .skill-category h3 {
     font-size: 1.25rem;
-    margin-bottom: 0.4rem;
-  }
-
-  .category-subtitle {
-    font-size: 0.8rem;
-    margin-bottom: 1.2rem;
   }
 
   .skills-list {
@@ -154,12 +138,7 @@
 
   .skill-category h3 {
     font-size: 1.15rem;
-    margin-bottom: 0.3rem;
-  }
-
-  .category-subtitle {
-    font-size: 0.78rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   .skills-list {

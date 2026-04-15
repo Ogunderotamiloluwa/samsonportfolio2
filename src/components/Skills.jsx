@@ -5,8 +5,7 @@ import {
   FaCss3Alt, 
   FaGitAlt, 
   FaGithub,
-  FaNodeJs,
-  FaDatabase
+  FaNodeJs
 } from 'react-icons/fa'
 import { SiNetlify, SiVercel, SiMongodb } from 'react-icons/si'
 import './Skills.css'
@@ -28,12 +27,6 @@ export default function Skills() {
         { name: 'GitHub', icon: FaGithub, color: '#ffffff' },
         { name: 'Netlify', icon: SiNetlify, color: '#00c7b7' },
         { name: 'Vercel', icon: SiVercel, color: '#000000' },
-      ],
-    },
-    {
-      title: 'Backend Experience',
-      subtitle: '(Frontend-focused, with hands-on backend experience)',
-      skills: [
         { name: 'Node.js', icon: FaNodeJs, color: '#68a063' },
         { name: 'MongoDB', icon: SiMongodb, color: '#13aa52' },
       ],
@@ -91,7 +84,6 @@ export default function Skills() {
           {skillCategories.map((category, idx) => (
             <motion.div key={idx} className="skill-category" variants={itemVariants}>
               <h3>{category.title}</h3>
-              {category.subtitle && <p className="category-subtitle">{category.subtitle}</p>}
               <div className="skills-list">
                 {category.skills.map((skill, skillIdx) => {
                   const Icon = skill.icon
