@@ -115,9 +115,9 @@ export default function Contact() {
           <motion.div className="contact-info" variants={itemVariants}>
             <h3>Ready to Build Something Great?</h3>
             <p>
-              I'm available for exciting full-stack projects, technical consulting, and building MVPs quickly. 
-              Have an idea for an AI-powered app, marketplace, or platform? Let's discuss how I can help bring 
-              it to life with proven development practices.
+              I'm available for frontend projects, UI/UX implementation, and building beautiful responsive interfaces. 
+              Have an idea for an AI-powered app, marketplace, or platform? I specialize in crafting high-performance 
+              React applications with polished user experiences. Let's discuss how I can help bring your vision to life.
             </p>
 
             <div className="contact-links">
