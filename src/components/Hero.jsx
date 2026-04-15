@@ -30,6 +30,16 @@ export default function Hero() {
     },
   }
 
+  const buttonVariants = {
+    hover: {
+      scale: 1.05,
+      transition: { type: 'spring', stiffness: 300, damping: 15 },
+    },
+    tap: {
+      scale: 0.98,
+    },
+  }
+
   return (
     <section className="hero">
       <div className="hero-content">
@@ -55,18 +65,24 @@ export default function Hero() {
           </motion.p>
 
           <motion.div className="hero-buttons" variants={itemVariants}>
-            <button 
+            <motion.button 
               className="btn btn-primary"
               onClick={() => scrollToSection('projects')}
+              variants={buttonVariants}
+              whileHover="hover"
+              whileTap="tap"
             >
               View Projects <FiArrowRight />
-            </button>
-            <button 
+            </motion.button>
+            <motion.button 
               className="btn btn-secondary"
               onClick={() => scrollToSection('contact')}
+              variants={buttonVariants}
+              whileHover="hover"
+              whileTap="tap"
             >
               Hire Me
-            </button>
+            </motion.button>
           </motion.div>
         </motion.div>
       </div>

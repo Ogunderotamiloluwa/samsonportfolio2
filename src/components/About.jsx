@@ -21,6 +21,28 @@ export default function About() {
     },
   }
 
+  const highlightVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 },
+    },
+    hover: {
+      y: -8,
+      boxShadow: '0 12px 24px rgba(6, 182, 212, 0.2)',
+      transition: { duration: 0.3 },
+    },
+  }
+
+  const highlightsContainerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.15, delayChildren: 0.3 },
+    },
+  }
+
   return (
     <section id="about" className="about">
       <div className="container">
@@ -61,19 +83,25 @@ export default function About() {
             </p>
           </motion.div>
 
-          <motion.div className="about-highlights" variants={itemVariants}>
-            <div className="highlight-box">
+          <motion.div
+            className="about-highlights"
+            variants={highlightsContainerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <motion.div className="highlight-box" variants={highlightVariants} whileHover="hover">
               <h3>🎨 UI/UX Design</h3>
               <p>Creating beautiful, intuitive user interfaces with attention to detail, accessibility, and user experience</p>
-            </div>
-            <div className="highlight-box">
+            </motion.div>
+            <motion.div className="highlight-box" variants={highlightVariants} whileHover="hover">
               <h3>⚡ Performance</h3>
               <p>Building fast, responsive applications optimized for speed, smooth animations, and seamless interactions</p>
-            </div>
-            <div className="highlight-box">
+            </motion.div>
+            <motion.div className="highlight-box" variants={highlightVariants} whileHover="hover">
               <h3>📱 Responsive Design</h3>
               <p>Crafting pixel-perfect interfaces that work beautifully on all devices - desktop, tablet, and mobile</p>
-            </div>
+            </motion.div>
           </motion.div>
         </motion.div>
       </div>

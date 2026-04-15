@@ -41,7 +41,20 @@ function Stats() {
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  };
+    hover: {
+      y: -8,
+      boxShadow: '0 20px 40px rgba(6, 182, 212, 0.2)',
+      transition: { duration: 0.3 },
+    },
+  }
+
+  const iconVariants = {
+    hover: {
+      scale: 1.2,
+      color: '#06b6d4',
+      transition: { type: 'spring', stiffness: 300, damping: 10 },
+    },
+  }
 
   return (
     <section className="stats" id="stats">
@@ -56,10 +69,15 @@ function Stats() {
           {stats.map((stat, index) => {
             const IconComponent = stat.icon;
             return (
-              <motion.div key={index} className="stat-card" variants={cardVariants}>
-                <div className="stat-icon">
+              <motion.div
+                key={index}
+                className="stat-card"
+                variants={cardVariants}
+                whileHover="hover"
+              >
+                <motion.div className="stat-icon" variants={iconVariants} whileHover="hover">
                   <IconComponent />
-                </div>
+                </motion.div>
                 <h3 className="stat-number">{stat.number}</h3>
                 <p className="stat-label">{stat.label}</p>
                 <p className="stat-description">{stat.description}</p>

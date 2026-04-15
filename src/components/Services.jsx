@@ -53,7 +53,20 @@ function Services() {
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  };
+    hover: {
+      y: -8,
+      boxShadow: '0 20px 40px rgba(6, 182, 212, 0.2)',
+      transition: { duration: 0.3 },
+    },
+  }
+
+  const iconVariants = {
+    hover: {
+      scale: 1.15,
+      rotate: 5,
+      transition: { type: 'spring', stiffness: 300, damping: 10 },
+    },
+  }
 
   return (
     <section className="services" id="services">
@@ -79,10 +92,15 @@ function Services() {
           {services.map((service) => {
             const IconComponent = service.icon;
             return (
-              <motion.div key={service.title} className="service-card" variants={cardVariants}>
-                <div className="service-icon">
+              <motion.div
+                key={service.title}
+                className="service-card"
+                variants={cardVariants}
+                whileHover="hover"
+              >
+                <motion.div className="service-icon" variants={iconVariants} whileHover="hover">
                   <IconComponent />
-                </div>
+                </motion.div>
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
                 <ul className="service-features">

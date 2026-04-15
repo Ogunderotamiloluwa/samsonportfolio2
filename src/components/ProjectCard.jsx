@@ -12,6 +12,13 @@ export default function ProjectCard({ project, index }) {
     },
   }
 
+  const imageVariants = {
+    hover: {
+      scale: 1.08,
+      transition: { duration: 0.4, ease: 'easeOut' },
+    },
+  }
+
   return (
     <motion.div
       className="project-card"
@@ -19,9 +26,9 @@ export default function ProjectCard({ project, index }) {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      whileHover={{ y: -10 }}
+      whileHover={{ y: -10, boxShadow: '0 20px 40px rgba(6, 182, 212, 0.2)' }}
     >
-      <div className="project-image">
+      <motion.div className="project-image" variants={imageVariants} whileHover="hover">
         <img src={project.image} alt={project.title} />
         <div className="project-overlay">
           <a href={project.github} target="_blank" rel="noopener noreferrer" className="icon-link">

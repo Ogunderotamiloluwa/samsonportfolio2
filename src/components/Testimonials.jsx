@@ -15,6 +15,11 @@ function Testimonials() {
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+    hover: {
+      y: -8,
+      boxShadow: '0 20px 40px rgba(6, 182, 212, 0.2)',
+      transition: { duration: 0.3 },
+    },
   };
 
   return (
@@ -39,7 +44,12 @@ function Testimonials() {
           viewport={{ once: true }}
         >
           {testimonials.map((testimonial) => (
-            <motion.div key={testimonial.id} className="testimonial-card" variants={cardVariants}>
+            <motion.div
+              key={testimonial.id}
+              className="testimonial-card"
+              variants={cardVariants}
+              whileHover="hover"
+            >
               <div className="stars">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <FaStar key={i} />
