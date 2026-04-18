@@ -19,9 +19,9 @@ export default function Timeline() {
       color: '#8b5cf6',
     },
     {
-      year: 'Backend & Databases',
-      title: 'Full-Stack Skills',
-      description: 'Expanded expertise to Node.js, Express, MongoDB, and building complete full-stack applications.',
+      year: 'State Management',
+      title: 'Advanced Frontend',
+      description: 'Mastered advanced React patterns including hooks, context API, state management, and component optimization techniques.',
       icon: FaBriefcase,
       color: '#d946ef',
     },
