@@ -12,9 +12,9 @@ export default function Timeline() {
       color: '#6366f1',
     },
     {
-      year: 'JavaScript & React',
+      year: 'React & Modern Frontend',
       title: 'Interactive Development',
-      description: 'Built proficiency in vanilla JavaScript, ES6+, React hooks, and component-based architecture.',
+      description: 'Built strong proficiency in React, ES6+, hooks, component-based architecture, and creating dynamic user interfaces.',
       icon: FaRocket,
       color: '#8b5cf6',
     },
