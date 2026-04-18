@@ -9,35 +9,35 @@ export default function ImpactStats() {
 
   const stats = [
     { 
-      label: 'Users Served', 
-      value: 1240, 
-      icon: FaUsers, 
-      color: '#6366f1',
-      key: 'users',
-      suffix: '+'
-    },
-    { 
       label: 'Projects Completed', 
-      value: 25, 
+      value: 11, 
       icon: FaCode, 
-      color: '#8b5cf6',
+      color: '#6366f1',
       key: 'projects',
       suffix: '+'
     },
     { 
-      label: 'Goals Tracked', 
-      value: 50000, 
-      icon: FaCheckCircle, 
-      color: '#d946ef',
-      key: 'goals',
+      label: 'Years of Coding', 
+      value: 4, 
+      icon: FaRocket, 
+      color: '#8b5cf6',
+      key: 'years',
       suffix: '+'
     },
     { 
-      label: 'Success Rate', 
-      value: 98, 
-      icon: FaRocket, 
+      label: 'Technologies Mastered', 
+      value: 15, 
+      icon: FaCheckCircle, 
+      color: '#d946ef',
+      key: 'tech',
+      suffix: '+'
+    },
+    { 
+      label: 'Continuous Learning', 
+      value: 100, 
+      icon: FaUsers, 
       color: '#ec4899',
-      key: 'success',
+      key: 'learning',
       suffix: '%'
     },
   ]
@@ -96,8 +96,8 @@ export default function ImpactStats() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="impact-stats-title">Impact By The Numbers</h2>
-          <p className="impact-stats-subtitle">Real results that speak for themselves</p>
+          <h2 className="impact-stats-title">My Milestones</h2>
+          <p className="impact-stats-subtitle">Real achievements in my development journey</p>
         </motion.div>
 
         <motion.div
