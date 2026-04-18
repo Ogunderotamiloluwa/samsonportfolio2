@@ -5,30 +5,30 @@ import './Timeline.css'
 export default function Timeline() {
   const timelineEvents = [
     {
-      year: '2020',
-      title: 'Started Coding Journey',
-      description: 'Began learning web development with HTML, CSS, and JavaScript. First steps into creating beautiful, functional interfaces.',
+      year: 'HTML & CSS',
+      title: 'Web Fundamentals',
+      description: 'Mastered semantic HTML and modern CSS including Flexbox, Grid, and responsive design principles.',
       icon: FaCode,
       color: '#6366f1',
     },
     {
-      year: '2021',
-      title: 'Learning React & Backend',
-      description: 'Mastered React and started exploring backend technologies. Built my first full-stack projects with meaningful functionality.',
+      year: 'JavaScript & React',
+      title: 'Interactive Development',
+      description: 'Built proficiency in vanilla JavaScript, ES6+, React hooks, and component-based architecture.',
       icon: FaRocket,
       color: '#8b5cf6',
     },
     {
-      year: '2022',
-      title: 'Building Real Projects',
-      description: 'Developed diverse projects including e-commerce platforms, content management systems, and interactive applications.',
+      year: 'Backend & Databases',
+      title: 'Full-Stack Skills',
+      description: 'Expanded expertise to Node.js, Express, MongoDB, and building complete full-stack applications.',
       icon: FaBriefcase,
       color: '#d946ef',
     },
     {
-      year: '2024',
-      title: 'Continuous Growth',
-      description: 'Built 11+ projects showcasing expertise in React, Node.js, and modern web technologies. Committed to constantly improving my craft.',
+      year: 'Advanced Tools',
+      title: 'Professional Workflow',
+      description: 'Mastered Vite, git/GitHub, API design, authentication, and modern development best practices.',
       icon: FaAward,
       color: '#ec4899',
     },
@@ -63,8 +63,8 @@ export default function Timeline() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="timeline-title">My Journey</h2>
-          <p className="timeline-subtitle">From passion to expertise</p>
+          <h2 className="timeline-title">Technical Achievements</h2>
+          <p className="timeline-subtitle">Key skills and expertise I've developed</p>
         </motion.div>
 
         <motion.div
