@@ -147,6 +147,32 @@
   animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
+.hero-description-extended {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .hero-description-extended {
+    display: block;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(6, 182, 212, 0.2);
+    animation: slideInUp 0.8s ease-out 0.3s both;
+    opacity: 0;
+  }
+
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
 .hero-buttons {
   display: flex;
   gap: 1.5rem;
