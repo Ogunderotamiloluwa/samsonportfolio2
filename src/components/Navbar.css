@@ -162,11 +162,12 @@
   position: fixed;
   top: 56px;
   left: 0;
+  right: 0;
   width: 100%;
   max-width: 100vw;
   background: linear-gradient(180deg, var(--bg-secondary) 0%, rgba(15, 23, 41, 0.95) 100%);
   border-bottom: 1px solid rgba(6, 182, 212, 0.1);
-  z-index: 999;
+  z-index: 998;
   display: flex;
   flex-direction: column;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
@@ -187,9 +188,10 @@
   cursor: pointer;
   transition: all 0.2s ease;
   border-bottom: 1px solid rgba(6, 182, 212, 0.05);
-  display: flex;
+  display: flex !important;
   align-items: center;
   gap: 10px;
+  width: 100%;
 }
 
 .mobile-menu-link:hover {

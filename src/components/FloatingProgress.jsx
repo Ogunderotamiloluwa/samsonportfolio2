@@ -7,16 +7,19 @@ export default function FloatingProgress() {
   const [isVisible, setIsVisible] = useState(true)
 
   useEffect(() => {
-    const handleScroll = (container) => {
+    const handleScroll = () => {
+      const appContainer = document.querySelector('.app')
       let scrollTop = 0
       let docHeight = 0
       
-      if (container instanceof Window) {
-        scrollTop = window.scrollY
-        docHeight = document.documentElement.scrollHeight - window.innerHeight
+      if (appContainer) {
+        // If .app is the scrolling container
+        scrollTop = appContainer.scrollTop
+        docHeight = appContainer.scrollHeight - appContainer.clientHeight
       } else {
-        scrollTop = container.scrollTop
-        docHeight = container.scrollHeight - container.clientHeight
+        // Fallback to window scroll
+        scrollTop = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop
+        docHeight = document.documentElement.scrollHeight - window.innerHeight
       }
       
       const scrolled = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0
@@ -26,18 +29,19 @@ export default function FloatingProgress() {
       setIsVisible(scrollTop < 500)
     }
 
-    // Try to find the scrolling container
     const appContainer = document.querySelector('.app')
-    const scrollContainer = appContainer || window
     
-    const scrollListener = () => handleScroll(scrollContainer)
+    // Listen to scroll on both window and app container
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    if (appContainer) {
+      appContainer.addEventListener('scroll', handleScroll, { passive: true })
+    }
     
-    if (scrollContainer instanceof Window) {
-      window.addEventListener('scroll', scrollListener)
-      return () => window.removeEventListener('scroll', scrollListener)
-    } else {
-      scrollContainer.addEventListener('scroll', scrollListener)
-      return () => scrollContainer.removeEventListener('scroll', scrollListener)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      if (appContainer) {
+        appContainer.removeEventListener('scroll', handleScroll)
+      }
     }
   }, [])
 
