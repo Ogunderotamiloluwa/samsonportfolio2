@@ -8,41 +8,15 @@ export default function FloatingProgress() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const appContainer = document.querySelector('.app')
-      let scrollTop = 0
-      let docHeight = 0
-      
-      if (appContainer) {
-        // If .app is the scrolling container
-        scrollTop = appContainer.scrollTop
-        docHeight = appContainer.scrollHeight - appContainer.clientHeight
-      } else {
-        // Fallback to window scroll
-        scrollTop = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop
-        docHeight = document.documentElement.scrollHeight - window.innerHeight
-      }
-      
+      const scrollTop = window.scrollY || document.documentElement.scrollTop
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight
       const scrolled = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0
       setScrollProgress(scrolled)
-      
-      // Hide on mobile when scrolling down
       setIsVisible(scrollTop < 500)
     }
 
-    const appContainer = document.querySelector('.app')
-    
-    // Listen to scroll on both window and app container
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    if (appContainer) {
-      appContainer.addEventListener('scroll', handleScroll, { passive: true })
-    }
-    
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-      if (appContainer) {
-        appContainer.removeEventListener('scroll', handleScroll)
-      }
-    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   return (
