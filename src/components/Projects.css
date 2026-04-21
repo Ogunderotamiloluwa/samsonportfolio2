@@ -1,10 +1,16 @@
 .projects {
   padding: 120px 40px;
   background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .projects .container {
-  max-width: 1400px;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .projects-header {
@@ -35,7 +41,8 @@
   color: var(--text-muted);
   font-size: 1.05rem;
   line-height: 1.7;
-  max-width: 600px;
+  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
   animation: fadeInUp 0.8s ease-out 0.2s both;
 }
@@ -43,8 +50,11 @@
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 2.5rem;
+  gap: 1.5rem;
   align-items: stretch;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 .projects-grid > :nth-child(1),
@@ -81,7 +91,9 @@
 
 @media (max-width: 768px) {
   .projects {
-    padding: 80px 24px;
+    padding: 60px 18px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .projects-header {
@@ -100,29 +112,66 @@
 
 @media (max-width: 480px) {
   .projects {
-    padding: 50px 16px;
+    padding: 30px 10px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .projects-header {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
 
   .projects .section-title {
     font-size: 1.6rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
   }
 
   .projects-subtitle {
-    font-size: 0.95rem;
-    line-height: 1.6;
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
 
   .projects-grid {
     grid-template-columns: 1fr;
-    gap: 1.4rem;
+    gap: 0.8rem;
   }
 
   .projects-grid > :nth-child(n) {
     grid-column: auto;
+  }
+}
+
+/* Landscape Orientation - Mobile */
+@media (max-width: 480px) and (orientation: landscape) {
+  .projects {
+    padding: 30px 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .projects-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .projects .section-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .projects-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .project-card {
+    border-radius: 12px;
+  }
+
+  .project-image {
+    height: 150px;
   }
 }

@@ -1,10 +1,16 @@
 .skills {
   padding: 120px 40px;
   background: var(--bg-primary);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .skills .container {
-  max-width: 1400px;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .skills .section-title {
@@ -29,7 +35,10 @@
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  gap: 1.5rem;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 .skill-category {
@@ -115,7 +124,9 @@
 
 @media (max-width: 768px) {
   .skills {
-    padding: 60px 20px;
+    padding: 40px 20px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .skills-grid {
@@ -172,5 +183,44 @@
 
   .skill-item span {
     font-size: 0.8rem;
+  }
+}
+
+/* Landscape Orientation - Mobile */
+@media (max-width: 480px) and (orientation: landscape) {
+  .skills {
+    padding: 25px 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .skills .section-title {
+    margin-bottom: 1.5rem;
+  }
+
+  .skills-grid {
+    gap: 1rem;
+  }
+
+  .skill-category {
+    padding: 1rem;
+  }
+
+  .skill-category h3 {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .skill-subtitle {
+    font-size: 0.7rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .skills-list {
+    gap: 0.8rem;
+  }
+
+  .skill-item span {
+    font-size: 0.75rem;
   }
 }

@@ -3,6 +3,8 @@
   background: linear-gradient(135deg, rgba(15, 23, 42, 0.5), rgba(30, 41, 59, 0.5));
   position: relative;
   overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .services .section-header {
@@ -30,9 +32,10 @@
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-  max-width: 1400px;
-  margin: 0 auto;
+  gap: 1.5rem;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 .service-card {
@@ -114,7 +117,9 @@
 
 @media (max-width: 768px) {
   .services {
-    padding: 80px 20px;
+    padding: 40px 18px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .services .section-header h2 {
@@ -141,7 +146,9 @@
 
 @media (max-width: 480px) {
   .services {
-    padding: 35px 16px;
+    padding: 30px 12px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .services .section-header h2 {
@@ -171,23 +178,5 @@
   .service-card p {
     font-size: 0.85rem;
     line-height: 1.5;
-  }
-}
-
-  .service-icon {
-    font-size: 1.75rem;
-    margin-bottom: 15px;
-  }
-
-  .service-card h3 {
-    font-size: 1rem;
-  }
-
-  .service-card p {
-    font-size: 0.85rem;
-  }
-
-  .service-features li {
-    font-size: 0.8rem;
   }
 }

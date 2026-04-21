@@ -1,10 +1,16 @@
 .about {
   background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
   padding: 120px 40px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .about .container {
-  max-width: 1400px;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .section-title {
@@ -29,8 +35,11 @@
 .about-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 6rem;
+  gap: 3rem;
   align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .about-text p {
@@ -92,7 +101,9 @@
 
 @media (max-width: 768px) {
   .about {
-    padding: 60px 20px;
+    padding: 40px 20px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .about-content {
@@ -115,7 +126,9 @@
 
 @media (max-width: 480px) {
   .about {
-    padding: 35px 16px;
+    padding: 30px 12px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .about-content {

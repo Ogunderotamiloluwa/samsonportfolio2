@@ -3,18 +3,25 @@
   border-top: 1px solid rgba(6, 182, 212, 0.1);
   padding: 5rem 40px 3rem;
   margin-top: 120px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .footer .container {
-  max-width: 1400px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .footer-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 4rem;
+  gap: 2rem;
   margin-bottom: 4rem;
+  width: 100%;
+  padding: 0;
 }
 
 .footer-section {
@@ -118,8 +125,10 @@
 /* Tablet Adjustments */
 @media (max-width: 768px) {
   .footer {
-    padding: 3.5rem 24px 2.5rem;
+    padding: 3rem 18px 2.5rem;
     margin-top: 80px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .footer-content {
@@ -216,7 +225,5 @@
   .footer-bottom p {
     font-size: 0.85rem;
     margin: 0.5rem 0;
-  }
-}
   }
 }

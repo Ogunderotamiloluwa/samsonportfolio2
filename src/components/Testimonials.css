@@ -2,6 +2,8 @@
   padding: 120px 40px;
   background: linear-gradient(135deg, #0f172a, #1e293b);
   position: relative;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .testimonials .section-header {
@@ -29,9 +31,10 @@
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  max-width: 1400px;
-  margin: 0 auto;
+  gap: 1.5rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .testimonial-card {
@@ -121,7 +124,9 @@
 
 @media (max-width: 768px) {
   .testimonials {
-    padding: 80px 20px;
+    padding: 40px 18px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .testimonials .section-header h2 {
@@ -144,7 +149,9 @@
 
 @media (max-width: 480px) {
   .testimonials {
-    padding: 35px 16px;
+    padding: 30px 12px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .testimonials .section-header h2 {
@@ -174,28 +181,5 @@
 
   .testimonial-author {
     font-size: 0.9rem;
-  }
-}
-
-  .testimonial-card {
-    padding: 20px;
-  }
-
-  .testimonial-text {
-    font-size: 0.85rem;
-    margin-bottom: 15px;
-  }
-
-  .author-image {
-    width: 40px;
-    height: 40px;
-  }
-
-  .author-info h4 {
-    font-size: 0.9rem;
-  }
-
-  .author-info p {
-    font-size: 0.75rem;
   }
 }

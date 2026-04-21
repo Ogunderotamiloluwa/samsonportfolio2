@@ -1,10 +1,16 @@
 .contact {
   padding: 120px 40px;
   background: var(--bg-primary);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .contact .container {
-  max-width: 1400px;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .contact .section-title {
@@ -29,8 +35,11 @@
 .contact-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 6rem;
+  gap: 3rem;
   align-items: start;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .contact-info h3 {
@@ -50,8 +59,10 @@
 .contact-links {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
   margin-bottom: 2rem;
+  width: 100%;
+  padding: 0;
 }
 
 .contact-link {
@@ -196,7 +207,9 @@
 
 @media (max-width: 768px) {
   .contact {
-    padding: 60px 20px;
+    padding: 40px 20px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .contact-content {
@@ -215,7 +228,9 @@
 
 @media (max-width: 480px) {
   .contact {
-    padding: 35px 16px;
+    padding: 30px 12px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .contact-info h3 {
