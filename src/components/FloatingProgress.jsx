@@ -7,9 +7,18 @@ export default function FloatingProgress() {
   const [isVisible, setIsVisible] = useState(true)
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight
+    const handleScroll = (container) => {
+      let scrollTop = 0
+      let docHeight = 0
+      
+      if (container instanceof Window) {
+        scrollTop = window.scrollY
+        docHeight = document.documentElement.scrollHeight - window.innerHeight
+      } else {
+        scrollTop = container.scrollTop
+        docHeight = container.scrollHeight - container.clientHeight
+      }
+      
       const scrolled = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0
       setScrollProgress(scrolled)
       
@@ -17,8 +26,19 @@ export default function FloatingProgress() {
       setIsVisible(scrollTop < 500)
     }
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    // Try to find the scrolling container
+    const appContainer = document.querySelector('.app')
+    const scrollContainer = appContainer || window
+    
+    const scrollListener = () => handleScroll(scrollContainer)
+    
+    if (scrollContainer instanceof Window) {
+      window.addEventListener('scroll', scrollListener)
+      return () => window.removeEventListener('scroll', scrollListener)
+    } else {
+      scrollContainer.addEventListener('scroll', scrollListener)
+      return () => scrollContainer.removeEventListener('scroll', scrollListener)
+    }
   }, [])
 
   return (
