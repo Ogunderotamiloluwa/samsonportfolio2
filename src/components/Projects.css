@@ -78,7 +78,7 @@
 
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
   .projects-grid > :nth-child(n) {
