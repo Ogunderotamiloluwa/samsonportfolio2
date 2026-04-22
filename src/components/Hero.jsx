@@ -78,7 +78,11 @@ export default function Hero() {
             </motion.p>
           </motion.div>
           
-          <motion.p className="hero-description" variants={itemVariants}>
+          <motion.p className="hero-description hero-description-mobile" variants={itemVariants}>
+            I craft high-performance React applications that scale. From AI platforms serving 1000+ users to e-commerce marketplaces with complex seat selection systems, I build polished interfaces that solve real business problems with precision and attention to detail.
+          </motion.p>
+
+          <motion.p className="hero-description hero-description-desktop" variants={itemVariants}>
             I craft high-performance React applications that scale. From AI platforms serving 1000+ users to e-commerce marketplaces with complex seat selection systems, I build polished interfaces that solve real business problems with precision and attention to detail. With expertise in modern JavaScript, React hooks, and performance optimization, I transform complex requirements into elegant, user-centric solutions delivering interfaces that users love and businesses rely on.
           </motion.p>
 

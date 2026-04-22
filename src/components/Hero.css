@@ -145,17 +145,27 @@
   margin-left: 0;
   margin-right: 0;
   animation: fadeInUp 0.8s ease-out 0.2s both;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-  font-weight: 400;
-  letter-spacing: 0.3px;
+}
+
+.hero-description-mobile {
+  display: block;
+}
+
+.hero-description-desktop {
+  display: none;
 }
 
 @media (min-width: 769px) {
-  .hero-description {
+  .hero-description-mobile {
+    display: none;
+  }
+
+  .hero-description-desktop {
+    display: block;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
     font-size: 1.1rem;
     font-weight: 400;
     letter-spacing: 0.4px;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   }
 }
 
