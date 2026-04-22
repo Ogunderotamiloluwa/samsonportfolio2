@@ -79,13 +79,7 @@ export default function Hero() {
           </motion.div>
           
           <motion.p className="hero-description" variants={itemVariants}>
-            I craft high-performance React applications that scale. From AI platforms 
-            serving 1000+ users to e-commerce marketplaces with complex seat selection systems, 
-            I build polished interfaces that solve real business problems with precision and 
-            attention to detail.
-            <span className="hero-description-extended">
-              With expertise in modern JavaScript, React hooks, and performance optimization, I transform complex requirements into elegant, user-centric solutions. My work spans healthcare technology, fintech platforms, and e-commerce ecosystems—delivering interfaces that users love and businesses rely on.
-            </span>
+            I craft high-performance React applications that scale. From AI platforms serving 1000+ users to e-commerce marketplaces with complex seat selection systems, I build polished interfaces that solve real business problems with precision and attention to detail. With expertise in modern JavaScript, React hooks, and performance optimization, I transform complex requirements into elegant, user-centric solutions delivering interfaces that users love and businesses rely on.
           </motion.p>
 
           <motion.div className="hero-buttons" variants={itemVariants}>
